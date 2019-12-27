@@ -1,4 +1,24 @@
 import matplotlib.pyplot as plt
+import sys
+import advent3
+from Naked.toolshed.shell import execute_rb
+
+
+success = execute_rb('advent3.rb')
+
+if success:
+    # handle success of the Ruby code
+    print(response)
+else:
+    # handle failure of the Ruby code
+    print("Goodbye")
+
+
+def line(instructions):
+    line1points =  [[0,0]]
+
+
+
 
 print("This line will be printed.")
 
@@ -19,4 +39,4 @@ plt.ylabel('y - axis')
 plt.title('My first graph!')
 
 # function to show the plot
-plt.show() 
+plt.show()
