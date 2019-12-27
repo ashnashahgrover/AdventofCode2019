@@ -44,7 +44,6 @@ f.close
 
 f = File.new('set2.txt', 'w')
 f.write(line2points)
-f.write("NEXT SET")
 f.close
 
 # def intersect(line1points, line2points)

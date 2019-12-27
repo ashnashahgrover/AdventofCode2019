@@ -1,34 +1,42 @@
 import matplotlib.pyplot as plt
-import sys
-import advent3
-from Naked.toolshed.shell import execute_rb
+from ast import literal_eval
 
 
-success = execute_rb('advent3.rb')
+f = open('set1.txt', 'r')
+set1 = f.read()
+f.close()
 
-if success:
-    # handle success of the Ruby code
-    print(response)
-else:
-    # handle failure of the Ruby code
-    print("Goodbye")
+f = open('set2.txt', 'r')
+set2 = f.read()
+f.close()
 
+set1 = literal_eval(set1)
+set2 = literal_eval(set2)
 
-def line(instructions):
-    line1points =  [[0,0]]
+x_co1 = []
+y_co1 = []
 
+x_co2 = []
+y_co2 = []
 
+for i in set1:
+    x_co1.append(i[0])
+    y_co1.append(i[1])
 
+for i in set2:
+    x_co2.append(i[0])
+    y_co2.append(i[1])
 
-print("This line will be printed.")
 
 # x axis values
-x = [1,2,3]
+# x = [1,2,3]
 # corresponding y axis values
-y = [2,4,1]
+# y = [2,4,1]
 
 # plotting the points
-plt.plot(x, y)
+plt.plot(x_co1, y_co1)
+plt.plot(x_co2, y_co2, color='olive')
+
 
 # naming the x axis
 plt.xlabel('x - axis')
